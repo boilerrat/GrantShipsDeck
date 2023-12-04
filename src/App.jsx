@@ -6,7 +6,7 @@ import SlideVerticalSplit from '../components/SlideVerticalSplit';
 import SlideHorizSplit from '../components/SlideHorizSplit';
 import SlideTriplets from '../components/SlideTriplets';
 import SlideTopTwoBottomOne from '../components/SlideTopTwoBottomeOne';
-import slides from '../data/slides'; // Ensure correct path
+import slides from '../data/slides'; 
 
 const App = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -32,7 +32,9 @@ const App = () => {
         return <SlideTriplets title={currentSlide.title} triplets={currentSlide.triplets} />; 
       case 'topTwoBottomOne':
         return <SlideTopTwoBottomOne title={currentSlide.title} topContents={currentSlide.topContents} bottomContent={currentSlide.bottomContent} />;
-    }
+        default:
+          return <Slide title={currentSlide.title} content={currentSlide.content} contentType={currentSlide.contentType} />;
+      }
   };
 
   return (

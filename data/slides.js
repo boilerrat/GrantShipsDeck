@@ -1,7 +1,11 @@
 // data/slides.js
 
 const slides = [
-  { title: 'Slide 1', content: 'This is the first slide.', template: 'standard' },
+  { title: 'Slide 1',
+    content: '../data/images/balloon.png',
+    contentType: 'image',
+    template: 'standard'
+   },
   { 
     title: 'Slide 2', 
     quadrants: [
